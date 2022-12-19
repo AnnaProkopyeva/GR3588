@@ -25,24 +25,24 @@ if (inputLine != null)
 
 
     //Способ №2
-    //string outDayOfWeek = string.Empty;
+    string outDayOfWeek = string.Empty;
 
-    //switch (inputNumber)
-    //{
-        //case 1: outDayOfWeek = "Понедельник"; break;
-        //case 2: outDayOfWeek = "Вторник"; break;
-        //case 3: outDayOfWeek = "Среда"; break;
-        //case 4: outDayOfWeek = "Четверг"; break;
-        //case 5: outDayOfWeek = "Пятница"; break;
-        //case 6: outDayOfWeek = "Суббота"; break;
-        //case 7: outDayOfWeek = "Воскресенье"; break;
-        //default: outDayOfWeek = "Это не день недели!"; break;
+    switch (inputNumber)
+    {
+        case 1: outDayOfWeek = "Понедельник"; break;
+        case 2: outDayOfWeek = "Вторник"; break;
+        case 3: outDayOfWeek = "Среда"; break;
+        case 4: outDayOfWeek = "Четверг"; break;
+        case 5: outDayOfWeek = "Пятница"; break;
+        case 6: outDayOfWeek = "Суббота"; break;
+        case 7: outDayOfWeek = "Воскресенье"; break;
+        default: outDayOfWeek = "Это не день недели!"; break;
 
-    //}
+    }
 
 
     //Способ №3
-    string outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputNumber));
+    //string outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputNumber));
 
     //Выводим данные в консоль
     Console.WriteLine(outDayOfWeek);
