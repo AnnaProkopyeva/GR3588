@@ -6,7 +6,7 @@ string? secondLine = Console.ReadLine();
 string? thirdLine = Console.ReadLine();
 
 //Проверяем, чтобы данные были не пустыми
-if (firstLine != null && secondLine != null)
+if (firstLine != null && secondLine != null && thirdLine != null)
 {
     //Парсим введеное число
     int firstNumber = int.Parse(firstLine);
