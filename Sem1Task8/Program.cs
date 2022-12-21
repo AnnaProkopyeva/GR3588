@@ -13,11 +13,13 @@ if (inputLine != null)
     int startNumber = 2;
     string result = string.Empty;
 
-    while (startNumber <= inputNumber)
+    while (startNumber <= inputNumber-2)
     {
-        result = result + startNumber;
+        result = result + startNumber + ", ";
         startNumber = startNumber + 2;
     }
+
+    result = result + startNumber;
 
     Console.WriteLine(result);
     
