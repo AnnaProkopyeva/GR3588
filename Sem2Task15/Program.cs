@@ -5,14 +5,30 @@ int inputNumber = int.Parse(Console.ReadLine() ?? "0");
 
 if (inputNumber > 0 && inputNumber < 8)
 {
-    if (inputNumber > 5)
-    {
-        Console.WriteLine("Расслабься, сегодня выходной!");
-    }
-    else
-    {
-        Console.WriteLine("Сегодня рабочий день!");
-    }
+    //Вариант 1
+    //if (inputNumber > 5)
+    //{
+    //    Console.WriteLine("Расслабься, сегодня выходной!");
+    //}
+    //else
+    //{
+    //    Console.WriteLine("Сегодня рабочий день!");
+    //}
+
+    //Вариант 2
+    //Заполняем словарь
+    Dictionary<int, string> dict = new Dictionary<int, string>{
+        {1, "Неделя только началась!"},
+        {2, "Неделя только началась!"},
+        {3, "Все еще рабочий день!"},
+        {4, "Все еще рабочий день!"},
+        {5, "До выходных остался один день!"},
+        {6, "Можешь расслабиться, сегодня выходной!"},
+        {7, "Расслабляйся умеренно, завтра начнется рабочий день!"},
+    };
+
+    // Выводим значение словаря по дню
+    Console.WriteLine(dict[inputNumber]);
 }
 else
 {
